@@ -1,0 +1,65 @@
+.task-form{
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+    margin-bottom:2rem;
+    &__input{
+        width:100%;
+        min-width: 0;
+        padding:1.2rem 1.4rem;
+
+        border:1px solid var(--button-border);
+        border-radius: 0.4rem;
+        background-color:var(--background-color);
+        color:var(--text-color);
+
+        font:inherit;
+        line-height:1.5;
+        
+        &::placeholder{
+            color:var(--text-color);
+            opacity: 0.55;
+        }
+
+        &:focus-visible{
+            outline:0.2rem solid var(--link-color);
+            outline-offset: 0.3rem;
+        }
+    }
+
+    &__button {
+        align-self: flex-start;
+        padding:0.8rem 1.2rem;
+        border:0.1rem solid var(--button-border);
+        border-radius: 0.6rem;
+        color:var(--text-color);
+        font:inherit;
+        font-weight: 400;
+        line-height: 1.2;
+
+        cursor:pointer;
+         transition:
+            background-color 160ms ease,
+            border-color 160ms ease;
+
+        &:hover {
+            background-color: var(--buttonBorder);
+            border-color: var(--linkColor);
+        }
+
+        &:focus-visible {
+            outline: 0.2rem solid var(--linkColor);
+            outline-offset: 0.3rem;
+        }
+
+        &:active {
+            background-color: var(--backgroundColor);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+}

@@ -1,0 +1,57 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+
+}
+
+
+body{
+    font-size:1.6rem;
+    background-color: var(--background-color);
+    color:var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color:var(--link-color);
+
+    /*
+    * Give accessibility queues to the user that the 
+    * item is a clickable link
+    */
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: underline;
+    }
+}
+
+button{
+    all:unset;
+    padding:0.8rem 1.2rem;
+    border:1px solid var(--button-border);
+    border-radius: 0.6rem;
+    background-color: var(--button-background-color);
+    font:inherit;
+    cursor: pointer;
+
+    &:hover {
+        filter:brightness(1.15);
+    }
+
+    &:focus-visible {
+        outline: 0.2rem solid var(--link-color);
+        outline-offset: 0.3rem;
+    }
+
+    &:disabled {
+        opacity:0.5;
+        cursor:not-allowed;
+    }
+}
